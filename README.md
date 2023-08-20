@@ -6,7 +6,8 @@ collect data to be submitted to the therocktrading bankruptcy procedure
 python3.11 -m venv .venv
 ```
 
-# Install requirements for development
+# Install requirements
+The projects needs a [blockchair API key](https://blockchair.com/api), to query their database.
 
 ```bash
 .venv/bin/python -m pip install -e .[dev]
