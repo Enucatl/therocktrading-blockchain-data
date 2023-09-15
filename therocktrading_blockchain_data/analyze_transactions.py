@@ -38,7 +38,7 @@ class TransactionFinder(abc.ABC):
         pprint(params)
         pprint(data)
         df = pd.DataFrame.from_records(data["data"])
-        if d["Note"]:
+        if "Note" in d and "recipient" in d and d["Note"]:
             # matching this in the query to blockchair doesn't work for whatever reason
             try_matching_note = df[df["recipient"] == d["Note"]]
             if not try_matching_note.empty:
